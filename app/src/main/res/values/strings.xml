@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">BookList</string>
+    <string name="book_picture">Book Picture</string>
+    <string name="aaa">\"RATING ---  \"</string>
+</resources>
