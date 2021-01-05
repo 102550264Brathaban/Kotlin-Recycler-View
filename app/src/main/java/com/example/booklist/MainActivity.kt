@@ -37,7 +37,7 @@ class MainActivity : AppCompatActivity() {
         adapter = BookAdapter(data,a,this)
         recyclerView.adapter = adapter
 
-    }
+    } 
 
     private fun ClckFun(it:Int) {
         data[it].des = "hkhjkh"
