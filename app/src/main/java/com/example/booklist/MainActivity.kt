@@ -2,12 +2,9 @@ package com.example.booklist
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Adapter
 import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import kotlinx.android.synthetic.main.rowview.*
-import kotlinx.android.synthetic.main.rowview.view.*
 
 class MainActivity : AppCompatActivity() {
     val data  = mutableListOf<Books>()
@@ -23,7 +20,7 @@ class MainActivity : AppCompatActivity() {
         recyclerView.layoutManager = linearLayoutManager
 
 
-      //  val data  = mutableListOf<Books>()
+
         data.add(Books("Going Long 1",R.drawable.a,1))
         data.add(Books("Going Long 2",R.drawable.b,2))
         data.add(Books("The commitment dialogues 1",R.drawable.c,3))
@@ -37,7 +34,7 @@ class MainActivity : AppCompatActivity() {
 
        val a: (Int) -> Unit = {a -> ClckFun(a)}
         //val adapter = BookAdapter(data) {ClckFun (it)}
-        adapter = BookAdapter(data,a)
+        adapter = BookAdapter(data,a,this)
         recyclerView.adapter = adapter
 
     }
@@ -49,6 +46,6 @@ class MainActivity : AppCompatActivity() {
 
     }
 
-
 }
+
 
